@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+@font-face {
+   font-family: 'Rocking';
+   src: url('../fonts/Rocking.ttf');
+}
+
+@font-face {
+   font-family: 'Rocks';
+   src: url('../fonts/Rocks Personal Use.ttf');
+}
+
+ body{
+    background: url('../imgs/guitar-background.jpg') fixed no-repeat;
+    background-size: 100% 100%;
+    background-blend-mode: luminosity;
+    
+ }
+
+ ul#solos{
+   margin-top: 2.5%;
+   margin-bottom: 2.5%;
+   height: 95%;
+   margin-left: -50px;
+   vertical-align: middle;
+ }
+
+ ul#solos li{
+   list-style: none;
+   background-color: rgb(45, 45, 100);
+   border: 2px solid rgb(20, 20, 20);
+   border-radius: 10px;
+
+   padding-right: 10px;
+   margin-left: -10px;
+   margin-bottom: 10px;
+   width: 20%;
+
+   font-family: 'Rocks', 'Arial';
+   text-align: right;
+   font-size: 35pt;
+   color: rgb(160, 160, 160);
+
+   opacity: 0.9;
+
+   transition: background-color 0.5s;
+ }
+
+ ul#solos li:hover{
+  background-color: rgb(45, 45, 70);
+ }
+
+.selected{
+   border:2px solid black !important;
+   /* resize: both; */
+   border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation:stroke 5s infinite linear%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:776%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%232d3561' /%3E%3Cstop offset='25%25' stop-color='%23c05c7e' /%3E%3Cstop offset='50%25' stop-color='%23f3826f' /%3E%3Cstop offset='100%25' stop-color='%23ffb961' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3' stroke-dasharray='388'/%3E %3C/svg%3E") 1 !important;
+   border-radius: 0px !important;
+}
+
+ div#reprodutor{
+   position: absolute;
+   right: 10%;
+   top: 15%;
+ }
+
+ div#reprodutor iframe#ytplayer{
+   background-color: rgb(50,50,120);
+   border: solid 6px rgb(50,50,120);
+   margin-bottom: 20px;
+ }
+
+ div#reprodutor div#soloName{
+   background-color: rgb(50,50,120);
+   border: 2px solid rgb(50,50,80);
+   border-radius: 10px; 
+}
+
+div#reprodutor div#soloName [data-information="song"]{
+   margin: 20px;
+   padding-top: 10px;
+   padding-bottom: 20px;
+   width: 530px;
+
+   color:rgb(160, 160, 160);
+   font-family: 'Rocking', 'Arial';
+   text-align:center;
+   font-size: 35pt;
+
+   border-bottom: 1px solid rgb(160, 160, 160);
+}
+
+div#reprodutor div#soloName [data-information="band"]{
+   color:rgb(160, 160, 160);
+   font-family: 'Rocking', 'Arial';
+   text-align:center;
+   font-size: 20pt;
+}
+
+button#showForm{
+   background: none;
+   border: none;
+   color:rgb(160, 160, 160);
+   font-weight: bolder;
+   font-size: 30pt;
+   position: absolute;
+   left: 20px;
+   top: 88%;
+
+   transform: rotate(90deg);
+
+   transition: transform 0.5s;
+}
+
+button#showForm:hover{
+   transform: rotate(1350deg);
+}
+
+.userSpec{
+   /* display: none; */
+   opacity: 0;
+   
+   background-color: rgb(50,50,120);
+   border: 2px solid rgb(50,50,80);
+   border-radius: 10px; 
+   left: 5%;
+   top: 105%;
+   width: 90%;
+   height: 100px;
+   position: absolute;
+   
+   transition: opacity 0.5s;
+}
+
+.showForm{
+   /* z-index: 0; */
+   /* display: flex; */
+   opacity: 1;
+   
+}
+
+form{
+   position: absolute;
+   top: 8%;
+   left: 2.5%;
+   width: 70%;
+}
+
+div.userSpec form label{
+   color: rgb(160, 160, 160);
+   font-family: 'Rocks';
+   font-size: 30pt;
+}
+
+div.userSpec form input{
+   background: none;
+   border: none;
+   width: 80%;
+   height: 20px;
+   border: 2px solid rgb(50,50,80);
+   border-radius: 5px;
+   background-color: rgb(255, 255, 255, 0.8);
+
+   color: black;
+   font-family: 'Rocks';
+   font-size: 25pt;
+   padding: 5px;
+}
+
